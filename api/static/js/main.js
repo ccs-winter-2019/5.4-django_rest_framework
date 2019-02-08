@@ -19,7 +19,7 @@
     });
 
     // AJAX Request to get a list of items
-    $.ajax('http://localhost:8000/data/', {
+    $.ajax('/data/', {
       'dataType': 'json',
       'error': function(resp, err){console.log(resp, err)},
       'success': function (data) {
@@ -35,7 +35,7 @@
     $('.post').on('click', function(){
 
       // POST ajax request to create a new piece of candy
-      $.ajax('http://localhost:8000/data/', {
+      $.ajax('/data/', {
         'method': 'POST',
         'data': {'name': 'thin mint', 'is_chocolate': true},
         'success': function (data) {

@@ -25,6 +25,10 @@ class DataView(viewsets.ModelViewSet):
     # we do that with a serializer class.
     serializer_class = CandySerializer
 
+    def perform_create(self, serializer):
+        serializer.save(user=self.request.user)
+
+
 
 # # This is a way to create a view that can send back a json response
 # # This method has some problems though

@@ -11,8 +11,13 @@
 <body>
     <h1>Thanks Roy!</h1>
 
-    <button class="post">What about mint???</button>
+{#    <a href="https://en.wikipedia.org/wiki/Representational_state_transfer" class="add-candy-btn">What about mint???</a>#}
 
+    <form id="add-candy-form">
+        <input type="text" name="title" id="candy-title"/>
+
+        <input type="submit" value="Add Candy"/>
+    </form>
 
     {% csrf_token %}
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
